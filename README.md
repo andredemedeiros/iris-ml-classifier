@@ -1,6 +1,6 @@
-# Iris ML Classifier
+# Wine ML Classifier
 
-Simple machine learning pipeline for classifying iris flower species using Python and scikit-learn.
+Simple machine learning pipeline for classifying wine varieties using Python and scikit-learn.
 
 This repository demonstrates a minimal and reproducible ML workflow including:
 - dataset loading
@@ -13,30 +13,42 @@ The project is intended for educational purposes and as a minimal example of a m
 
 ## Dataset
 
-This project uses the Iris dataset, a classic dataset in machine learning used for classification tasks.
+This project uses the Wine dataset, a classic dataset in machine learning used for classification tasks.
 
 Dataset characteristics:
 
-- Samples: 150
-- Features: 4 numerical measurements
-  - sepal length
-  - sepal width
-  - petal length
-  - petal width
+- Samples: 178
+- Features: 13 numerical chemical analysis measurements of wines
 - Classes:
-  - setosa
-  - versicolor
-  - virginica
+  - class_0
+  - class_1
+  - class_2
 
-The goal is to predict the species of an iris flower based on these measurements.
+The features correspond to chemical properties of wine such as:
+
+- alcohol
+- malic acid
+- ash
+- alcalinity of ash
+- magnesium
+- total phenols
+- flavanoids
+- nonflavanoid phenols
+- proanthocyanins
+- color intensity
+- hue
+- OD280/OD315 of diluted wines
+- proline
+
+The goal is to predict the wine class based on these chemical measurements.
 
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/andredemedeiros/iris-ml-classifier.git
-cd iris-ml-classifier
+git clone https://github.com/andredemedeiros/wine-ml-classifier.git
+cd wine-ml-classifier
 ```
 
 Create a virtual environment:
@@ -75,11 +87,11 @@ python model.py
 
 | Property | Value |
 |---|---|
-| **Preprocessor** | None (passthrough) |
-| **Model** | SVM — linear kernel |
-| **Test Accuracy** | `0.9810` |
-| **Test F1 (weighted)** | `0.9809` |
-| **CV Mean ± Std** | `0.9556 ± 0.0544` |
+| **Preprocessor** | StandardScaler |
+| **Model** | ExtraTrees |
+| **Test Accuracy** | `0.6906` |
+| **Test F1 (weighted)** | `0.6750` |
+| **CV Mean ± Std** | `0.6685 ± 0.0157` |
 
 ## License
 

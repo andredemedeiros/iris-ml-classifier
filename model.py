@@ -22,12 +22,12 @@ np.random.seed(SEED)
 random.seed(SEED)
 
 # ── Load dataset ──────────────────────────────────────────────────────────────
-df = pd.read_csv("data/iris.csv")
+df = pd.read_csv("data/wine.csv")
 X = df.drop(columns=["target"]).values
 y = df["target"].values
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.7, random_state=SEED, stratify=y
+    X, y, test_size=0.2, random_state=SEED, stratify=y
 )
 
 # ── Preprocessing steps ───────────────────────────────────────────────────────
