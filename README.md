@@ -52,9 +52,17 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+## Dataset download
+
+Run the script:
+
+```bash
+python data/data_download.py
+```
+
 ## Model training and validation
 
-Run the training script:
+Run the script:
 
 ```bash
 python model.py
